@@ -10,3 +10,11 @@
 #
 # brainstormr=~/Projects/development/planetargon/brainstormr
 # cd $brainstormr
+
+function projects() {
+  select project in $(gitlist ~/git) 
+  do
+    cd "${project}"
+    return
+  done
+}
